@@ -4,20 +4,21 @@ package com.ceep.dominio;
  *
  * @author Ignacio Pérez Jiménez
  */
-public class Teclado {
-    private int idTeclado;
-    private int contadorTeclados;
+public class Teclado extends DispositivoEntrada{
+    private final int idTeclado;
+    private static int contadorTeclados;
 
     //Constructor
-    public Teclado(int idTeclado, int contadorTeclados) {
-        this.idTeclado = idTeclado;
-        this.contadorTeclados = contadorTeclados;
+    public Teclado(String tipoEntrada, String marca) {
+        super(tipoEntrada, marca);
+        this.idTeclado = ++contadorTeclados;
     }
     
     //ToString
     @Override
     public String toString() {
-        return "Teclado{" + "idTeclado=" + idTeclado + ", contadorTeclados=" + contadorTeclados + '}';
+        return "Teclado{" + "idTeclado=" + idTeclado + '}' + super.toString();
     }
+
     
 }

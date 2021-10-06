@@ -4,21 +4,23 @@ package com.ceep.dominio;
  *
  * @author Ignacio Pérez Jiménez
  */
-public class Raton {
-    private int idRaton;
-    private int contadorRatones;
+public class Raton extends DispositivoEntrada{
+    private final int idRaton;
+    private static int contadorRatones;
 
     //Constructor
-    public Raton(int idRaton, int contadorRatones) {
-        this.idRaton = idRaton;
-        this.contadorRatones = contadorRatones;
+    public Raton(String tipoEntrada, String marca) {
+        super(tipoEntrada, marca);
+        this.idRaton = ++contadorRatones;
     }
     
     //ToString
     @Override
     public String toString() {
-        return "Raton{" + "idRaton=" + idRaton + ", contadorRatones=" + contadorRatones + '}';
+        return "Raton{" + "idRaton=" + idRaton + '}' + super.toString();
     }
+
+    
     
     
 }

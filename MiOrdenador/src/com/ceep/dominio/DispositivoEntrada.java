@@ -5,8 +5,8 @@ package com.ceep.dominio;
  * @author Ignacio Pérez Jiménez
  */
 public class DispositivoEntrada {
-    private String tipoEntrada;
-    private String marca;
+    protected String tipoEntrada;
+    protected String marca;
 
     //Constructor
     public DispositivoEntrada(String tipoEntrada, String marca) {
